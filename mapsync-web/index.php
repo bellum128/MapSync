@@ -10,9 +10,7 @@
 		<link rel="stylesheet" type="text/css" href="css/map.css">
 	</head>
 
-	<body>	
-		<?php $loadStart = microtime(true);?>
-	
+	<body>				
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-12">
@@ -51,11 +49,7 @@
 			
 				<footer class="footer">
 					<div class="container">
-						<?php
-							$loadEnd = microtime(true);
-							$loadTime = ($loadEnd - $loadStart);
-						?>
-						<p class="text-muted">MapSync is created by <a href="http://bellum128.weebly.com">bellum128 Productions</a> <span class = "pull-right"> Generated in <?php echo(round($loadTime, 4))?> seconds </br>Updated at: <?php  echo(date("g:i:sa", filemtime("index.php"))) ?></span></p>
+						<p class="text-muted">MapSync is created by <a href="http://bellum128.weebly.com">bellum128 Productions</a> <span class = "pull-right"></span></p>
 					</div>
 			    </footer>
 			</div>
