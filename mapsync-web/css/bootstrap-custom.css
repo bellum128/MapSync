@@ -1,0 +1,43 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  background-color: #262626;
+
+}
+.footer {
+  position: absolute;
+  padding-top:10px;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-image: -webkit-linear-gradient(top, #3c3c3c 0%, #222 100%);
+  background-image:      -o-linear-gradient(top, #3c3c3c 0%, #222 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#3c3c3c), to(#222));
+  background-image:         linear-gradient(to bottom, #3c3c3c 0%, #222 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3c3c3c', endColorstr='#ff222222', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  background-repeat: repeat-x;
+  border-radius: 4px;
+}
+
+/* MapSync Custom Styles
+-------------------------------------------------- */
+.embedCode
+{
+  width:100%;
+  background-color:#4F4F4F;
+  font-family:courier;
+  padding-left:20px;
+}
+.topNotice
+{
+  margin-left:0px;
+  margin-right:0px; 
+}
