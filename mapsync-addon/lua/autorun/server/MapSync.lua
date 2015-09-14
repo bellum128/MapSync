@@ -91,6 +91,7 @@ function MapSync.UpdateMap()
 		["version"]=MapSync.version,		
 		["hostname"]=GetHostName(),
 		["hostip"]=GetConVarString("ip"),
+		["hostport"]=GetConVarString("hostport"),
 		["map"]=game.GetMap(),
 		["playercount"]=tostring(MapSync.PlayerCount),
 		["playernames"]=table.ToString(MapSync.PlayerNames, nil, false),

@@ -234,7 +234,29 @@
 					<div class="col-md-4 well infoColumn">
 						<div class = "infoWrapper">
 							<p>Host Name: <?php echo(getValue("hostname")) ?></p>
-							<p>IP: <?php  echo(getValue("hostip")) ?> </p>
+							<p>IP: 
+								<?php  
+									$connectAddress = ""; // Either an IP:port or just an IP.
+									$connectable = FALSE; // Whether the Steam protocol can be used to connect to this server.
+									if(getValue("hostport") && (getValue("hostip") != "localhost")) // If valid Steam protocol string can be generated...
+									{
+										$connectAddress = getValue("hostip") . ':' . getValue("hostport");
+										$connectable = TRUE;
+									}
+									else // If valid Steam protocol string can be generated...
+									{
+										$connectAddress = getValue("hostip");
+										$connectable = FALSE;
+									}
+
+									echo($connectAddress); // Display IP whether connectable or not.
+
+									if($connectable) // If connectable...
+									{
+										echo(' <a href = "steam://connect/'. $connectAddress .'"> Connect</a>');  // Add connect button.
+									}
+								?>	
+							</p>
 							<p>Current Map: <?php  echo(getValue("map")) ?> </p>
 							<p>Player Count: <?php  echo(getValue("playercount")) ?> </p>
 							<p>Last Contact: <?php  echo(date("m/d/Y g:i:sa", getValue("servertime"))) ?> </p>
